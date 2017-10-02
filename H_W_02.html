@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Home Work 2</title>
+		<style>
+			header{
+				border: 3px solid lightblue;
+			}
+			nav {
+				width:50%;
+				border: 2px solid black;
+				margin: 0 auto;
+				text-align: center;
+				padding: 10px;
+			}
+			main{
+				border: 1px solid red;
+				width: 950px;
+			}
+			#webAcademy{
+				width: 30%;
+			}
+			#vBox{
+				width: 30px;
+			}
+			#google{
+				width: 80px;
+			}
+			a{
+				padding: 10px;
+			}
+			ul{
+				list-style: square;
+			}
+			aside{
+				float: right;
+			}
+			#asideImg{
+				width:50%;
+			}
+			footer{
+				border: 1px solid lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="http://webacademy.bg" target="_blanc">
+					<img src="wa_logo.png" alt="webacademyLogo" id="webAcademy" />
+				</a>
+				<a href="https://www.vbox7.com" target="_blanc">
+					<img src="Vbox7fff.png" alt="vboxLogo" id="vBox" />
+				</a>
+				<a href="https://www.google.com" target="_blanc">
+					<img src="GoogleHummingbird.jpg" alt="vboxLogo" id="google" />
+				</a>
+			</nav>
+		</header>
+		<aside>
+			<img src="http://lorempixel.com/400/580" alt="asidePic" id="asideImg" />
+		</aside>
+		<main>
+			<h1>Какво имаме да правим днес</h1>
+			<section>
+				<details>
+					<summary>Първо хигиената</summary>
+						<ul>
+							<li>Ставам</li>
+							<li>Измивам се</li>
+							<li>Обличам се</li>
+							<li>Тръгвам за работа</li>
+						</ul>
+				</details>
+			</section>
+			<section>
+				<details>
+					<summary>Отивам на работа</summary>
+					<video width="200" height="100" controls="controls" autoplay="autoplay" alowfullscreen="alowfullscreen">
+						<source src="SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+						<source src="SampleVideo_1280x720_1mb.ogg" type="video/ogg" />
+						Your browser does not support video tag
+					</video>
+				</details>
+			</section>
+			<section>
+				<details>
+					<summary>Слушам музика</summary>
+					<audio controls="controls">
+						<source src="SampleAudio_0.4mb.mp3" type="audio/mp3" />
+						<source src="SampleAudio_0.4mb.ogg" type="audio/ogg" />
+					</audio>
+				</details>
+			</section>
+			<section>
+				<details>
+					<summary>Обучавам се в <mark>YouTube</mark></summary>
+					<iframe width="280" height="157" src="https://www.youtube.com/embed/gT0Lh1eYk78" frameborder="0" allowfullscreen></iframe>
+				</details>
+			</section>
+			<article>
+				Прогрес бар
+				<button type="button" onclick="controlBar(false)">-</button>
+				<progress max="100" value="50" id="bar"></progress>
+				<button type="button" onclick="controlBar(true)">+</button>
+			</article>
+		</main>
+		<footer>
+			&copy;Web Academy
+			<aside>2016</aside>
+		</footer>
+		<script>
+			var progBar = document.getElementById("bar");
+			function controlBar(bool){
+				if (bool)
+				{
+					progBar.value += 10;
+					if(progBar.value > 100)
+					{
+						progBar.value = 100;
+					}
+				}
+				else
+				{
+					progBar.value -= 10;
+					if(progBar.value < 0)
+					{
+						progBar.value = 0;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
